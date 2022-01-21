@@ -21,6 +21,12 @@
 		0B1798EB279A43B800299D1D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798E9279A43B800299D1D /* ContactViewController.swift */; };
 		0B1798EC279A43B800299D1D /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1798EA279A43B800299D1D /* ContactViewController.xib */; };
 		0B1798F0279A4D1B00299D1D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798EF279A4D1B00299D1D /* RoundButton.swift */; };
+		0B1798F7279AF8CC00299D1D /* RoundTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */; };
+		0B1798FA279B0F7100299D1D /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798F9279B0F7100299D1D /* ContactViewModel.swift */; };
+		0B1798FE279B0FA900299D1D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798FD279B0FA900299D1D /* UserModel.swift */; };
+		0B179902279B100D00299D1D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B179901279B100D00299D1D /* UserViewModel.swift */; };
+		0B17990A279B2A2500299D1D /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B179909279B2A2500299D1D /* ProductsViewModel.swift */; };
+		0B17990C279B2A5B00299D1D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17990B279B2A5B00299D1D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		0B1798E9279A43B800299D1D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		0B1798EA279A43B800299D1D /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 		0B1798EF279A4D1B00299D1D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextfield.swift; sourceTree = "<group>"; };
+		0B1798F9279B0F7100299D1D /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		0B1798FD279B0FA900299D1D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0B179901279B100D00299D1D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		0B179909279B2A2500299D1D /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		0B17990B279B2A5B00299D1D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +84,10 @@
 		0B1798B32799E3C100299D1D /* WTTechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				0B1798F8279B0D7E00299D1D /* Modules */,
 				0B1798C22799E3C300299D1D /* Info.plist */,
 				0B1798D8279A2FA900299D1D /* Commons */,
 				0B1798D72799FBBB00299D1D /* Config */,
-				0B1798E5279A40A300299D1D /* Contact */,
-				0B1798E0279A3B2B00299D1D /* Profile */,
-				0B1798CE2799E43600299D1D /* Login */,
-				0B1798C82799E43500299D1D /* Products */,
 			);
 			path = WTTechnicalTest;
 			sourceTree = "<group>";
@@ -86,8 +95,8 @@
 		0B1798C82799E43500299D1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B1798CD2799E43500299D1D /* ProductsViewController.xib */,
-				0B1798C92799E43500299D1D /* ProductsViewController.swift */,
+				0B179908279B2A0A00299D1D /* ViewModel */,
+				0B179907279B2A0500299D1D /* View */,
 				0B1798CA2799E43500299D1D /* CustomCells */,
 			);
 			path = Products;
@@ -105,8 +114,8 @@
 		0B1798CE2799E43600299D1D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0B1798CF2799E43600299D1D /* LoginViewController.xib */,
-				0B1798D02799E43600299D1D /* LoginViewController.swift */,
+				0B179906279B29F300299D1D /* ViewModel */,
+				0B179905279B29EB00299D1D /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			children = (
 				0B1798E1279A3B4000299D1D /* UserProfileViewController.swift */,
 				0B1798E2279A3B4000299D1D /* UserProfileViewController.xib */,
+				0B179901279B100D00299D1D /* UserViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -141,8 +151,8 @@
 		0B1798E5279A40A300299D1D /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				0B1798E9279A43B800299D1D /* ContactViewController.swift */,
-				0B1798EA279A43B800299D1D /* ContactViewController.xib */,
+				0B179904279B29B000299D1D /* ViewModel */,
+				0B179903279B29A800299D1D /* View */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 		0B1798ED279A445700299D1D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0B1798F5279AF8AB00299D1D /* TextfieldUtils */,
 				0B1798EE279A446100299D1D /* ButtonUtils */,
 			);
 			path = Utils;
@@ -161,6 +172,85 @@
 				0B1798EF279A4D1B00299D1D /* RoundButton.swift */,
 			);
 			path = ButtonUtils;
+			sourceTree = "<group>";
+		};
+		0B1798F5279AF8AB00299D1D /* TextfieldUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */,
+			);
+			path = TextfieldUtils;
+			sourceTree = "<group>";
+		};
+		0B1798F8279B0D7E00299D1D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0B179900279B0FF000299D1D /* Models */,
+				0B1798E5279A40A300299D1D /* Contact */,
+				0B1798E0279A3B2B00299D1D /* Profile */,
+				0B1798CE2799E43600299D1D /* Login */,
+				0B1798C82799E43500299D1D /* Products */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0B179900279B0FF000299D1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798FD279B0FA900299D1D /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B179903279B29A800299D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798E9279A43B800299D1D /* ContactViewController.swift */,
+				0B1798EA279A43B800299D1D /* ContactViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B179904279B29B000299D1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798F9279B0F7100299D1D /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B179905279B29EB00299D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798CF2799E43600299D1D /* LoginViewController.xib */,
+				0B1798D02799E43600299D1D /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B179906279B29F300299D1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B17990B279B2A5B00299D1D /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B179907279B2A0500299D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B1798CD2799E43500299D1D /* ProductsViewController.xib */,
+				0B1798C92799E43500299D1D /* ProductsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B179908279B2A0A00299D1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B179909279B2A2500299D1D /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,12 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1798F7279AF8CC00299D1D /* RoundTextfield.swift in Sources */,
+				0B179902279B100D00299D1D /* UserViewModel.swift in Sources */,
 				0B1798E3279A3B4000299D1D /* UserProfileViewController.swift in Sources */,
 				0B1798D62799E43600299D1D /* LoginViewController.swift in Sources */,
 				0B1798F0279A4D1B00299D1D /* RoundButton.swift in Sources */,
 				0B1798B52799E3C100299D1D /* AppDelegate.swift in Sources */,
+				0B17990A279B2A2500299D1D /* ProductsViewModel.swift in Sources */,
 				0B1798D22799E43600299D1D /* ProductTableViewCell.swift in Sources */,
+				0B17990C279B2A5B00299D1D /* LoginViewModel.swift in Sources */,
 				0B1798D12799E43600299D1D /* ProductsViewController.swift in Sources */,
+				0B1798FA279B0F7100299D1D /* ContactViewModel.swift in Sources */,
+				0B1798FE279B0FA900299D1D /* UserModel.swift in Sources */,
 				0B1798EB279A43B800299D1D /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +486,8 @@
 				INFOPLIST_FILE = WTTechnicalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
@@ -418,6 +516,8 @@
 				INFOPLIST_FILE = WTTechnicalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
