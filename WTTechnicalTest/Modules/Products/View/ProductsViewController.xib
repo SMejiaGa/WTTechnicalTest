@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="WTTechnicalTest" customModuleProvider="target">
             <connections>
+                <outlet property="productTable" destination="qFo-Qp-Yxy" id="rR4-f5-W0Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,32 +20,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qFo-Qp-Yxy" userLabel="productsTableview">
-                    <rect key="frame" x="0.0" y="126" width="414" height="770"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" name="MainColor"/>
-                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Vw-MU-ecG">
+                    <rect key="frame" x="0.0" y="83" width="414" height="813"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="qFo-Qp-Yxy" userLabel="productsTableview">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuestros Productos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-Rk-ZsP" userLabel="titleLabel">
-                    <rect key="frame" x="100" y="78" width="214" height="21"/>
+                    <rect key="frame" x="20" y="44" width="374" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="GrayForBorders"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-je-TM8" userLabel="SideButton">
+                    <rect key="frame" x="364" y="42.5" width="50" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="8S7-Lt-QNQ"/>
+                        <constraint firstAttribute="width" secondItem="p3L-je-TM8" secondAttribute="height" multiplier="6:5" constant="10" id="AR5-WP-glM"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="SideBarIcon" imagePlacement="leading"/>
+                    <connections>
+                        <action selector="sideButton" destination="-1" eventType="touchUpInside" id="AxE-0T-gEO"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.094117647058823528" green="0.14117647058823529" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="lkY-Rk-ZsP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="4wa-R6-TGi"/>
-                <constraint firstItem="lkY-Rk-ZsP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4zd-bH-lGn"/>
-                <constraint firstItem="lkY-Rk-ZsP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="34" id="Nnm-MA-ZNK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lkY-Rk-ZsP" secondAttribute="trailing" constant="100" id="uRK-d1-ntg"/>
+                <constraint firstItem="p3L-je-TM8" firstAttribute="centerY" secondItem="lkY-Rk-ZsP" secondAttribute="centerY" id="Jiw-Xg-CPU"/>
+                <constraint firstItem="lkY-Rk-ZsP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L86-nW-ma3"/>
+                <constraint firstItem="2Vw-MU-ecG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NAD-1n-sCm"/>
+                <constraint firstAttribute="bottom" secondItem="2Vw-MU-ecG" secondAttribute="bottom" id="Onw-5o-95H"/>
+                <constraint firstItem="lkY-Rk-ZsP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P18-3n-bfW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lkY-Rk-ZsP" secondAttribute="trailing" constant="20" id="a1I-Yg-1al"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p3L-je-TM8" secondAttribute="trailing" id="aTO-IN-CaC"/>
+                <constraint firstItem="2Vw-MU-ecG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eIv-gv-prG"/>
+                <constraint firstItem="2Vw-MU-ecG" firstAttribute="top" secondItem="lkY-Rk-ZsP" secondAttribute="bottom" constant="9" id="meT-oi-71l"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="MainColor">
-            <color red="0.054999999701976776" green="0.10199999809265137" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="SideBarIcon" width="38" height="38"/>
+        <namedColor name="GrayForBorders">
+            <color red="0.49803921568627452" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func prepareUIWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(
-            rootViewController: LoginViewController()
+            rootViewController: LoginViewController(viewModel: LoginViewModel())
         )
         window?.makeKeyAndVisible()
     }
