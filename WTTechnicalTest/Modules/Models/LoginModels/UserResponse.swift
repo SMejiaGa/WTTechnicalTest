@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct UserModel {
-    
+struct UserResponse: Decodable{
+    let ExpirationDate: Int
 }

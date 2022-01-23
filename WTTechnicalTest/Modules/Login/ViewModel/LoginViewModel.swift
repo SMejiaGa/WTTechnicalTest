@@ -11,16 +11,15 @@ enum LoginViewModelState {
     case idle
     case loading
     case authenticationSuccessful
-    case error(error: Error)
+    case error(error: String)
 }
 
 class LoginViewModel {
     
-    init() {
-        
-    }
-    
     var stateDidChange: ((LoginViewModelState) -> Void)?
+    private let loginService = LoginService()
+    private var userName: String?
+    private var userPassword: String?
     
     private var status: LoginViewModelState = .idle {
         didSet {
@@ -30,7 +29,21 @@ class LoginViewModel {
         }
     }
     
-    private func submitLogin() {
-        
+    func submitLogin(username: String, password: String) {
+        status = .loading
+        userName = username
+        userPassword = password
+        requestLogin(user: UserRequest(username: username, password: password))
+    }
+    
+    private func requestLogin(user: UserRequest) {
+        loginService.postLogin(user: user) { expirationDate in
+            if expirationDate != 0 {
+                self.status = .authenticationSuccessful
+                print(expirationDate)
+            } else {
+                self.status = .error(error: "unable to create")
+            }
+        }
     }
 }

@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: UIViewController {
+    @IBOutlet private var loader: UIActivityIndicatorView?
+    @IBOutlet var usernameTextfield: UITextField?
+    @IBOutlet var passwordTextfield: UITextField?
+    
     @IBAction private func submitButton() {
-        navigateToHome()
+        viewModel.submitLogin(
+            username: usernameTextfield?.text ?? .init(),
+            password: passwordTextfield?.text ?? .init())
     }
     private let viewModel: LoginViewModel
 
@@ -24,32 +31,38 @@ class LoginViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true 
         subscribeToViewModel()
-
     }
     
     private func subscribeToViewModel() {
         viewModel.stateDidChange = { [weak self] status in
+            guard let self = self else {
+                return
+            }
             switch status {
             case .idle:
                 return
                 
             case .loading:
-               print("loading")
+                self.loader?.isHidden = false
+                self.loader?.startAnimating()
     
             case .authenticationSuccessful:
-                print("done")
+                self.loader?.isHidden = true
+                self.loader?.stopAnimating()
+                self.navigateToHome()
                 
             case .error(let error):
-                print("stop loading")
-                print("error")
+                print(error)
+                return
             }
         }
     }
     
     private func navigateToHome() {
         DispatchQueue.main.async {
-            let navigationController = ProductsViewController.instance
+            let navigationController = ProductViewController.instance
             navigationController.modalPresentationStyle = .fullScreen
             
             self.present(

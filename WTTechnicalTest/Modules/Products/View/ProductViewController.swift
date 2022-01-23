@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class ProductViewController: UIViewController {
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var productTable: UITableView!
     @IBAction private func sideButton() {
         showSideAlert()
@@ -30,7 +31,35 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
+        viewModel.fetchProductList()
         setupTableView()
+    }
+    
+    private func subscribeToViewModel() {
+        viewModel.stateDidChange = { [weak self] status in
+            guard let self = self else {
+                return
+            }
+            switch status {
+            case .idle:
+                return
+                
+            case .loading:
+                self.productTable.isHidden = true
+                self.loader.isHidden = false
+                
+            case .dataLoaded:
+                DispatchQueue.main.async {
+                    self.productTable.reloadData()
+                    self.productTable.isHidden = false
+                    self.loader.isHidden = true
+                }
+            case .error(let error):
+                print(error)
+                return
+            }
+        }
     }
     
     private func setupTableView() {
@@ -44,51 +73,53 @@ class ProductsViewController: UIViewController {
     
     private func showSideAlert() {
         
-            let alert = UIAlertController(title: "Opciones", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: Lang.Product.options, message: "", preferredStyle: .actionSheet)
             
-            alert.addAction(UIAlertAction(title: "Contacto", style: .default, handler: { [weak self] _ in
+        alert.addAction(UIAlertAction(title: Lang.Product.contact, style: .default, handler: { [weak self] _ in
                 guard let self = self else { return }
                 self.navigationController?.pushViewController(ContactViewController(viewModel: ContactViewModel()), animated: true)
             }))
             
-            alert.addAction(UIAlertAction(title: "Perfil", style: .default, handler: { [weak self] _ in
+        alert.addAction(UIAlertAction(title: Lang.Product.profile, style: .default, handler: { [weak self] _ in
                 
                 guard let self = self else { return }
                 self.navigationController?.pushViewController(UserProfileViewController(viewModel: UserViewModel()), animated: true)
             }))
         
-        alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { [weak self] _ in
+        alert.addAction(UIAlertAction(title: Lang.Product.logout, style: .destructive, handler: { [weak self] _ in
             
             guard let self = self else { return }
             self.navigationController?.dismiss(animated: true, completion: nil)
         }))
             
-            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: Lang.Product.cancel, style: .cancel, handler: nil))
             
             self.present(alert, animated: true, completion: {
             })
     }
 }
 
-extension ProductsViewController {
+extension ProductViewController {
     static var instance: UINavigationController {
         return UINavigationController(
-            rootViewController: ProductsViewController(
+            rootViewController: ProductViewController(
                 viewModel: ProductsViewModel()
             )
         )
     }
 }
 
-extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
+extension ProductViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.productList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? ProductTableViewCell {
-            cell.productNameLabel.text = "name"
-            cell.descriptionlabel.text = "desc"
+            cell.configCell(
+                name: viewModel.productList[indexPath.row].name,
+                description: viewModel.productList[indexPath.row].description,
+                image: viewModel.productList[indexPath.row].image)
             return cell
         }
         return UITableViewCell()
