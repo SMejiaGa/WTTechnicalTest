@@ -32,6 +32,7 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        subscribeToViewModel()
         viewModel.fetchProductList()
         setupTableView()
     }

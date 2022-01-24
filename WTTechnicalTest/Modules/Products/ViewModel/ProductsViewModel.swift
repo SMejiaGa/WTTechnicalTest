@@ -39,21 +39,21 @@ class ProductsViewModel {
                         name: product.Name,
                         description: product.Description,
                         image: (self?.downloadImage(from: imageUrl ?? .init(fileURLWithPath: "")))!
+               /* image: (self?.downloadImage(from: imageUrl ?? .init(fileURLWithPath: "")))!*/
                     )
                     self?.productList.append(data)
+                    self?.status = .dataLoaded
                 })
-                self?.status = .dataLoaded
+
             }
         }
     }
     
-    func getImageData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
+   
     
     func downloadImage(from url: URL) -> UIImage {
         var image: UIImage?
-        getImageData(from: url) { data, response, error in
+        productService.getImageData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async() {
                 return image = UIImage(data: data) ?? .init()
