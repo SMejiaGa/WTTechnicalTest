@@ -52,4 +52,4 @@ Se utiliza MVVM.
 ### Contact View / Google Maps
 ![WhatsApp Image 2022-01-24 at 1 06 13 AM](https://user-images.githubusercontent.com/67339434/150732530-25bb3e40-1369-4bb3-bde8-73620ae98b4c.jpeg)
 ### User Profile View
-![WhatsApp Image 2022-01-24 at 1 25 00 AM](https://user-images.githubusercontent.com/67339434/150732527-c4fa3501-b83a-4d26-90cd-685b47beeb38.jpeg)
+![WhatsApp Image 2022-01-24 at 10 47 31 AM](https://user-images.githubusercontent.com/67339434/150816208-d8d3e3fd-b590-481a-8f5c-3bdb4caaeb73.jpeg)
