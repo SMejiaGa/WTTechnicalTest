@@ -16,6 +16,7 @@ enum LoginViewModelState {
 
 class LoginViewModel {
     
+    // MARK: - properties
     var stateDidChange: ((LoginViewModelState) -> Void)?
     private let loginService = LoginService()
     private var userName: String?
@@ -29,6 +30,7 @@ class LoginViewModel {
         }
     }
     
+    // MARK: - Internal methods
     func submitLogin(username: String, password: String) {
         status = .loading
         userName = username
@@ -36,6 +38,7 @@ class LoginViewModel {
         requestLogin(user: UserRequest(username: username, password: password))
     }
     
+    // MARK: - Public methods
     private func requestLogin(user: UserRequest) {
         loginService.postLogin(user: user) { expirationDate in
             if expirationDate != 0 {

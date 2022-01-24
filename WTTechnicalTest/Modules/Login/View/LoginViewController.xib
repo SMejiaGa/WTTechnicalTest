@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="loader" destination="rUM-eb-ClK" id="Hk1-xu-Hrp"/>
                 <outlet property="passwordTextfield" destination="T84-8c-OKl" id="13l-pQ-uyq"/>
+                <outlet property="statusLabel" destination="GJ2-Cr-goP" id="rT8-Jp-Eq8"/>
                 <outlet property="usernameTextfield" destination="vmG-oD-oCJ" id="Yjc-Xy-0Ae"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="jwX-bC-hVA"/>
             </connections>
@@ -82,6 +83,12 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ2-Cr-goP">
+                    <rect key="frame" x="25" y="762" width="364" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="MainColor"/>
@@ -93,6 +100,7 @@
                 <constraint firstItem="vWy-5g-awk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="9TY-6a-h7C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5SB-iU-j1b" secondAttribute="trailing" constant="100" id="9gp-BP-S12"/>
                 <constraint firstItem="EHd-2y-UAg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BFd-ak-hYf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GJ2-Cr-goP" secondAttribute="trailing" constant="25" id="Ebl-IQ-v9k"/>
                 <constraint firstItem="T84-8c-OKl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="FKW-lS-dFH"/>
                 <constraint firstItem="vWy-5g-awk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fgc-he-5Lh"/>
                 <constraint firstItem="gKZ-80-swN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="PfC-Pn-dXz"/>
@@ -106,9 +114,11 @@
                 <constraint firstItem="2Gt-DZ-X6y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="cfk-a6-IyF"/>
                 <constraint firstItem="T84-8c-OKl" firstAttribute="top" secondItem="5SB-iU-j1b" secondAttribute="bottom" id="csf-5y-8nj"/>
                 <constraint firstItem="EHd-2y-UAg" firstAttribute="top" secondItem="vWy-5g-awk" secondAttribute="bottom" constant="40" id="f95-yM-K65"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GJ2-Cr-goP" secondAttribute="bottom" constant="100" id="hWk-Qs-5hm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T84-8c-OKl" secondAttribute="trailing" constant="90" id="iyH-XC-tvZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gKZ-80-swN" secondAttribute="trailing" constant="90" id="m1S-8z-uNX"/>
                 <constraint firstItem="5SB-iU-j1b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="oLf-fh-e4v"/>
+                <constraint firstItem="GJ2-Cr-goP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="sGk-48-BJw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EHd-2y-UAg" secondAttribute="trailing" constant="90" id="uhF-su-ZiP"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>

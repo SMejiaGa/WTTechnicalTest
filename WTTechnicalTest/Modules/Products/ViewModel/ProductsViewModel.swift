@@ -17,6 +17,7 @@ enum ProductsViewModelState {
 
 class ProductsViewModel {
     
+    // MARK: - Properties
     var stateDidChange: ((ProductsViewModelState) -> Void)?
     private(set) var productList = [FinalProduct]()
     private let productService = ProductService()
@@ -29,6 +30,7 @@ class ProductsViewModel {
         }
     }
     
+    // MARK: - Internal methods
     func fetchProductList() {
         status = .loading
         productService.getProducts { [weak self] productData in
@@ -47,9 +49,7 @@ class ProductsViewModel {
             }
         }
     }
-    
-   
-    
+
     func downloadImage(from url: URL) -> UIImage {
         var image: UIImage?
         productService.getImageData(from: url) { data, response, error in

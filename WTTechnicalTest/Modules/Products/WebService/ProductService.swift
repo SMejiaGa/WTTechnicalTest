@@ -12,8 +12,11 @@ typealias ProductServiceResult = ([ProductResponse]) -> Void
 
 class ProductService {
     
+    // MARK: - Properties
     private let serverEndpoint = "http://ws4.shareservice.co/TestMobile/rest/GetProductsData"
     
+    
+    // MARK: - Internal methods
     func getProducts(onFinished: @escaping ProductServiceResult) {
         AF.request(
             serverEndpoint,
@@ -31,7 +34,7 @@ class ProductService {
     }
     
 }
-
+// MARK: - Extensions
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode

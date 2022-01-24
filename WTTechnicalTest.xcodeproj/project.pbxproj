@@ -21,13 +21,14 @@
 		0B1798EC279A43B800299D1D /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1798EA279A43B800299D1D /* ContactViewController.xib */; };
 		0B1798F0279A4D1B00299D1D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798EF279A4D1B00299D1D /* RoundButton.swift */; };
 		0B1798F7279AF8CC00299D1D /* RoundTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */; };
-		0B1798FA279B0F7100299D1D /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798F9279B0F7100299D1D /* ContactViewModel.swift */; };
 		0B1798FE279B0FA900299D1D /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1798FD279B0FA900299D1D /* UserResponse.swift */; };
-		0B179902279B100D00299D1D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B179901279B100D00299D1D /* UserViewModel.swift */; };
 		0B17990C279B2A5B00299D1D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17990B279B2A5B00299D1D /* LoginViewModel.swift */; };
 		0BB51B3D279CD96D00EC1D49 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB51B3C279CD96D00EC1D49 /* Lang.swift */; };
 		0BB51B42279CDFB900EC1D49 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB51B41279CDFB900EC1D49 /* LoginService.swift */; };
 		0BB51B44279CEA7000EC1D49 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB51B43279CEA7000EC1D49 /* UserRequest.swift */; };
+		0BD382D3279EEFD6005159B0 /* TextFieldConfirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD382D2279EEFD6005159B0 /* TextFieldConfirmations.swift */; };
+		0BD382D9279EFFD1005159B0 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD382D8279EFFD1005159B0 /* ContactViewModel.swift */; };
+		0BD382DE279F00AF005159B0 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD382DD279F00AF005159B0 /* UserViewModel.swift */; };
 		0BD4382D279DA3AF00729A9B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD4382C279DA3AF00729A9B /* Alamofire */; };
 		0BD4382F279DB8BA00729A9B /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4382E279DB8BA00729A9B /* ProductResponse.swift */; };
 		0BD43834279DB9BF00729A9B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD43833279DB9BF00729A9B /* ProductService.swift */; };
@@ -59,14 +60,15 @@
 		0B1798EA279A43B800299D1D /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 		0B1798EF279A4D1B00299D1D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextfield.swift; sourceTree = "<group>"; };
-		0B1798F9279B0F7100299D1D /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		0B1798FD279B0FA900299D1D /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
-		0B179901279B100D00299D1D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		0B179909279B2A2500299D1D /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		0B17990B279B2A5B00299D1D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0BB51B3C279CD96D00EC1D49 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		0BB51B41279CDFB900EC1D49 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		0BB51B43279CEA7000EC1D49 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		0BD382D2279EEFD6005159B0 /* TextFieldConfirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldConfirmations.swift; sourceTree = "<group>"; };
+		0BD382D8279EFFD1005159B0 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		0BD382DD279F00AF005159B0 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		0BD4382E279DB8BA00729A9B /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		0BD43833279DB9BF00729A9B /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		0BD43835279DC6B500729A9B /* FinalProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProduct.swift; sourceTree = "<group>"; };
@@ -172,8 +174,8 @@
 		0B1798E0279A3B2B00299D1D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0BD382DA279EFFDE005159B0 /* ViewModel */,
 				0BB51B3F279CD9EC00EC1D49 /* View */,
-				0BB51B3E279CD9E400EC1D49 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -181,7 +183,7 @@
 		0B1798E5279A40A300299D1D /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				0B179904279B29B000299D1D /* ViewModel */,
+				0BD382D7279EFFC0005159B0 /*  ViewModel */,
 				0B179903279B29A800299D1D /* View */,
 			);
 			path = Contact;
@@ -190,6 +192,7 @@
 		0B1798ED279A445700299D1D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0BD382D4279EF3A0005159B0 /* AlertUtils */,
 				0BB51B3B279CD95B00EC1D49 /* Lang */,
 				0B1798F5279AF8AB00299D1D /* TextfieldUtils */,
 				0B1798EE279A446100299D1D /* ButtonUtils */,
@@ -209,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1798F6279AF8CC00299D1D /* RoundTextfield.swift */,
+				0BD382D2279EEFD6005159B0 /* TextFieldConfirmations.swift */,
 			);
 			path = TextfieldUtils;
 			sourceTree = "<group>";
@@ -241,14 +245,6 @@
 				0B1798EA279A43B800299D1D /* ContactViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0B179904279B29B000299D1D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0B1798F9279B0F7100299D1D /* ContactViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0B179905279B29EB00299D1D /* View */ = {
@@ -294,14 +290,6 @@
 			path = Lang;
 			sourceTree = "<group>";
 		};
-		0BB51B3E279CD9E400EC1D49 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0B179901279B100D00299D1D /* UserViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		0BB51B3F279CD9EC00EC1D49 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +305,29 @@
 				0BB51B41279CDFB900EC1D49 /* LoginService.swift */,
 			);
 			path = WebService;
+			sourceTree = "<group>";
+		};
+		0BD382D4279EF3A0005159B0 /* AlertUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlertUtils;
+			sourceTree = "<group>";
+		};
+		0BD382D7279EFFC0005159B0 /*  ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0BD382D8279EFFD1005159B0 /* ContactViewModel.swift */,
+			);
+			path = " ViewModel";
+			sourceTree = "<group>";
+		};
+		0BD382DA279EFFDE005159B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0BD382DD279F00AF005159B0 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0BD43830279DB98700729A9B /* LoginModels */ = {
@@ -510,22 +521,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD382D3279EEFD6005159B0 /* TextFieldConfirmations.swift in Sources */,
 				0BD4383F279E15EE00729A9B /* ProductViewController.swift in Sources */,
 				0BD4383E279E147D00729A9B /* ProductsViewModel.swift in Sources */,
 				0B1798F7279AF8CC00299D1D /* RoundTextfield.swift in Sources */,
-				0B179902279B100D00299D1D /* UserViewModel.swift in Sources */,
 				0BD43836279DC6B500729A9B /* FinalProduct.swift in Sources */,
 				0B1798E3279A3B4000299D1D /* UserProfileViewController.swift in Sources */,
 				0B1798D62799E43600299D1D /* LoginViewController.swift in Sources */,
 				0BB51B44279CEA7000EC1D49 /* UserRequest.swift in Sources */,
+				0BD382D9279EFFD1005159B0 /* ContactViewModel.swift in Sources */,
 				0B1798F0279A4D1B00299D1D /* RoundButton.swift in Sources */,
 				0B1798B52799E3C100299D1D /* AppDelegate.swift in Sources */,
 				0BB51B42279CDFB900EC1D49 /* LoginService.swift in Sources */,
 				0BB51B3D279CD96D00EC1D49 /* Lang.swift in Sources */,
+				0BD382DE279F00AF005159B0 /* UserViewModel.swift in Sources */,
 				0B1798D22799E43600299D1D /* ProductTableViewCell.swift in Sources */,
 				0B17990C279B2A5B00299D1D /* LoginViewModel.swift in Sources */,
 				0BD43834279DB9BF00729A9B /* ProductService.swift in Sources */,
-				0B1798FA279B0F7100299D1D /* ContactViewModel.swift in Sources */,
 				0B1798FE279B0FA900299D1D /* UserResponse.swift in Sources */,
 				0B1798EB279A43B800299D1D /* ContactViewController.swift in Sources */,
 				0BD4382F279DB8BA00729A9B /* ProductResponse.swift in Sources */,

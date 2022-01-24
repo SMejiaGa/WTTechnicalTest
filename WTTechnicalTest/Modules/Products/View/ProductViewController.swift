@@ -8,18 +8,22 @@
 import UIKit
 
 class ProductViewController: UIViewController {
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var productTable: UITableView!
     @IBAction private func sideButton() {
         showSideAlert()
     }
     
+    // MARK: - Properties
     private let customCellView = UINib(nibName: "ProductTableViewCell",
                                        bundle: nil)
     private let viewModel: ProductsViewModel
     private let cellIdentifier = "ProductTableViewCell"
     private let cellReuseIdentifier = "myCell"
     
+    // MARK: - Dependencies
     init(viewModel: ProductsViewModel){
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
@@ -29,6 +33,7 @@ class ProductViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -37,6 +42,7 @@ class ProductViewController: UIViewController {
         setupTableView()
     }
     
+    // MARK: - Private methods
     private func subscribeToViewModel() {
         viewModel.stateDidChange = { [weak self] status in
             guard let self = self else {

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactViewController" customModule="WTTechnicalTest" customModuleProvider="target">
             <connections>
+                <outlet property="contactTextView" destination="87J-RW-Uga" id="rZO-6j-Kaw"/>
+                <outlet property="statusLabel" destination="ndd-n5-MjZ" id="m3N-Uc-ae6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,12 +60,22 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Enviar solicitud"/>
+                    <connections>
+                        <action selector="sendRequest" destination="-1" eventType="touchUpInside" id="VjR-E3-Yba"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-n5-MjZ">
+                    <rect key="frame" x="50" y="377" width="314" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.1333333333" green="0.18039215689999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="87J-RW-Uga" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="0Za-GV-ooz"/>
+                <constraint firstItem="KmX-WC-xxr" firstAttribute="top" secondItem="ndd-n5-MjZ" secondAttribute="bottom" constant="20" id="4Cc-PD-yyf"/>
                 <constraint firstItem="7KF-W7-9BI" firstAttribute="centerY" secondItem="ugm-ns-gvb" secondAttribute="centerY" id="4iR-N4-z5f"/>
                 <constraint firstItem="7KF-W7-9BI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="57j-CW-Air"/>
                 <constraint firstItem="KmX-WC-xxr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="6Dq-2d-fnQ"/>
@@ -72,6 +84,8 @@
                 <constraint firstAttribute="trailing" secondItem="yuL-We-pDC" secondAttribute="trailing" constant="50" id="HN9-wl-0jX"/>
                 <constraint firstItem="yuL-We-pDC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="IKU-Lc-jHn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KmX-WC-xxr" secondAttribute="trailing" constant="90" id="JZ8-AR-jFF"/>
+                <constraint firstItem="ndd-n5-MjZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Ji5-hp-nBU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ndd-n5-MjZ" secondAttribute="trailing" constant="50" id="VxB-qI-zrA"/>
                 <constraint firstItem="ugm-ns-gvb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="fkT-Ib-WW6"/>
                 <constraint firstItem="yuL-We-pDC" firstAttribute="top" secondItem="ugm-ns-gvb" secondAttribute="bottom" constant="91" id="ijc-ii-GzN"/>
                 <constraint firstItem="ugm-ns-gvb" firstAttribute="leading" secondItem="7KF-W7-9BI" secondAttribute="trailing" constant="40" id="l2Z-YO-Z0G"/>
@@ -86,7 +100,7 @@
     <resources>
         <image name="BackButton" width="512" height="512"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
