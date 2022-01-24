@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87J-RW-Uga" customClass="RoundTextField" customModule="WTTechnicalTest" customModuleProvider="target">
-                    <rect key="frame" x="50" y="367" width="314" height="34"/>
+                    <rect key="frame" x="50" y="290" width="314" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -30,15 +30,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmX-WC-xxr" customClass="RoundButton" customModule="WTTechnicalTest" customModuleProvider="target">
-                    <rect key="frame" x="90" y="530" width="234" height="31"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Enviar solicitud"/>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registra tu numero de telefono y contactaremos contigo lo mas pronto posible" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-We-pDC">
-                    <rect key="frame" x="50" y="256" width="314" height="61"/>
+                    <rect key="frame" x="50" y="179" width="314" height="61"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -59,6 +52,13 @@
                         <action selector="backButton" destination="-1" eventType="touchUpInside" id="Mt0-LE-DIa"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmX-WC-xxr" customClass="RoundButton" customModule="WTTechnicalTest" customModuleProvider="target">
+                    <rect key="frame" x="90" y="397" width="234" height="31"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Enviar solicitud"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.1333333333" green="0.18039215689999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,12 +73,12 @@
                 <constraint firstItem="yuL-We-pDC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="IKU-Lc-jHn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KmX-WC-xxr" secondAttribute="trailing" constant="90" id="JZ8-AR-jFF"/>
                 <constraint firstItem="ugm-ns-gvb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="fkT-Ib-WW6"/>
-                <constraint firstItem="yuL-We-pDC" firstAttribute="top" secondItem="ugm-ns-gvb" secondAttribute="bottom" constant="168" id="ijc-ii-GzN"/>
+                <constraint firstItem="yuL-We-pDC" firstAttribute="top" secondItem="ugm-ns-gvb" secondAttribute="bottom" constant="91" id="ijc-ii-GzN"/>
                 <constraint firstItem="ugm-ns-gvb" firstAttribute="leading" secondItem="7KF-W7-9BI" secondAttribute="trailing" constant="40" id="l2Z-YO-Z0G"/>
                 <constraint firstItem="ugm-ns-gvb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ncq-Ac-fsE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="87J-RW-Uga" secondAttribute="trailing" constant="50" id="q7J-Wb-Gud"/>
                 <constraint firstItem="yuL-We-pDC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qEo-Ua-UNw"/>
-                <constraint firstItem="KmX-WC-xxr" firstAttribute="top" secondItem="87J-RW-Uga" secondAttribute="bottom" constant="129" id="tGu-EG-owC"/>
+                <constraint firstItem="KmX-WC-xxr" firstAttribute="top" secondItem="87J-RW-Uga" secondAttribute="bottom" constant="73" id="tGu-EG-owC"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </view>
