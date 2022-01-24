@@ -11,5 +11,5 @@ import UIKit
 struct FinalProduct {
     let name: String
     let description: String
-    let image: UIImage
+    let url: String
 }

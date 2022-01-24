@@ -120,7 +120,7 @@ extension ProductViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configCell(
                 name: viewModel.productList[indexPath.row].name,
                 description: viewModel.productList[indexPath.row].description,
-                image: viewModel.productList[indexPath.row].image)
+                imageURL: viewModel.productList[indexPath.row].url)
             return cell
         }
         return UITableViewCell()

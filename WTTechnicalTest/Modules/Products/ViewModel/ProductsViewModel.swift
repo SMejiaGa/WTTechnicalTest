@@ -38,8 +38,7 @@ class ProductsViewModel {
                     let data = FinalProduct(
                         name: product.Name,
                         description: product.Description,
-                        image: (self?.downloadImage(from: imageUrl ?? .init(fileURLWithPath: "")))!
-               /* image: (self?.downloadImage(from: imageUrl ?? .init(fileURLWithPath: "")))!*/
+                        url: product.ImageUrl
                     )
                     self?.productList.append(data)
                     self?.status = .dataLoaded

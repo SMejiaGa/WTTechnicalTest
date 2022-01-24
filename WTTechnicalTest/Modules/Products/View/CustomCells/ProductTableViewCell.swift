@@ -16,13 +16,13 @@ class ProductTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.cellView.layer.cornerRadius = 8
+        self.cellView.layer.cornerRadius = 10
     }
 
-    func configCell(name: String, description: String, image: UIImage) {
+    func configCell(name: String, description: String, imageURL: String) {
         self.productNameLabel.text = name
         self.descriptionLabel.text = description
-        self.productImageView.image = image
+        self.productImageView.downloaded(from: imageURL)
     }
 
 }
